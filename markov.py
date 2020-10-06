@@ -13,7 +13,8 @@ def open_and_read_file(file_path):
     # your code goes here
     contents = open(file_path).read()
 
-    return 'Contents of your file as one long string'
+    # return 'Contents of your file as one long string'
+    return contents
 
 
 def make_chains(text_string):
@@ -44,6 +45,10 @@ def make_chains(text_string):
     chains = {}
 
     # your code goes here
+    contents = open_and_read_file("green-eggs.txt")
+    words = contents.split()
+    for i in range(len(words) - 1):
+        print(words[i], words[i + 1])
 
     return chains
 
